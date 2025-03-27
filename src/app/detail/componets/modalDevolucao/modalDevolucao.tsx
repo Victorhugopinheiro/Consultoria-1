@@ -9,8 +9,8 @@ export function ModalDevolucao() {
     const { closeButton, height } = useContext(AuthContext)
 
     return (
-        <div className={!height ? "absolute mx-auto flex justify-center max-w-7xl w-full h-full top-0 z-40 px-1" : "absolute mx-auto flex justify-center  max-w-7xl w-full h-full top-10 z-40 px-1"}>
-            <div className={!height ? "w-10/12 h-2/4 sticky top-0 bg-slate-900 text-white rounded-md p-2 flex flex-col justify-center items-center md:w-3/5 lg:w-2/4" :"w-10/12 h-2/4 sticky top-0 bg-slate-900 text-white rounded-md p-2 flex flex-col justify-center items-center md:w-4/5 md:h-3/5 lg:w-3/4 lg:h-3/5"}>
+        <div className={!height ? "absolute mx-auto flex justify-center max-w-7xl w-full h-full top-0 z-40 px-1" : "absolute mx-auto flex justify-center max-w-7xl w-full h-full top-0 z-40 px-1"}>
+            <div className={!height ? "w-10/12 h-2/4 sticky top-0 bg-white text-black rounded-md p-2 flex flex-col justify-center items-center md:w-3/5 lg:w-2/4" : "w-10/12 h-2/4 sticky top-0 bg-white text-black rounded-md p-2 flex flex-col justify-center items-center md:w-4/5 md:h-3/5 lg:w-3/4 lg:h-3/5"}>
                 <div className="flex justify-end w-full">
                     <button className="flex justify-end" onClick={closeButton}><ShieldClose /></button>
                 </div>
@@ -31,7 +31,7 @@ export function ModalDevolucao() {
                         O consumidor tem direito à devolução integral do valor pago, incluindo frete  </p>
                 </div>
 
-                <p className="text-slate-700 text-sm">
+                <p className="text-slate-400 text-sm">
                     A lei da devolução está prevista no Código de Defesa do Consumidor (CDC), Lei nº 8.078, de 11 de setembro de 1990.
                 </p>
             </div>

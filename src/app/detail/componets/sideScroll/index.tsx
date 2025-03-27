@@ -1,9 +1,9 @@
 import useEmblaCarousel from "embla-carousel-react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
-import ImagemConsultoria from "../../../../../public/prof-1.jpg"
+import ImagemConsultoria from "../../../../../public/testeFrutas/consultoria01.jpg"
 import ImagemConsultoria2 from "../../../../../public/prof-2.jpg"
-import ImagemConsultoria3 from "../../../../../public/prof-3.webp"
+import ImagemConsultoria3 from "../../../../../public/testeFrutas/consultoria03.jpeg"
 
 
 

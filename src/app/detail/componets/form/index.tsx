@@ -68,8 +68,8 @@ export function FormComponent() {
 
 
     return (
-        <form action={handleSubmit} className=" bg-slate-900 w-full">
-            <select onChange={(e) => changeValue(e.target.value)} name="selectName" className="border p-2 w-3/5 rounded-md border-gray-500 bg-slate-900 text-white mx-auto flex justify-center md:w-full lg:h-full">
+        <form action={handleSubmit}  className=" bg-slate-100 w-full">
+            <select onChange={(e) => changeValue(e.target.value)} name="selectName" className="border p-2 w-3/5 rounded-md border-gray-500 bg-slate-100 text- mx-auto flex justify-center md:w-full lg:h-full">
                 {planos.map((item, index) => (
                     <option value={item.plano} id={item.plano} key={item.plano} className=" w-full rounded-md">{item.plano}</option>
                 ))}

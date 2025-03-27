@@ -59,16 +59,16 @@ export function Services() {
 
 
     return (
-        <section className="bg-slate-300 py-10 my-16  text-black">
+        <section className="bg-white py-10 my-16  text-black">
             <div className="container mx-auto px-4">
-                <h1 className="text-2xl text-center font-bold mb-6 md:text-3xl">Depoimentos dos nossos clientes</h1>
+                <h1 className="text-2xl text-center font-serif font-bold mb-6 md:text-3xl lg:text-4xl">Depoimentos dos nossos clientes</h1>
                 <div className="relative">
                     <div className="overflow-hidden" ref={emblaRef}>
                         <div className="flex">
                             {testimonials.map((item, index) => (
                                 <div key={index} className="flex-[0_0_100%] min-w-0 px-3 lg:flex-[0_0_calc(100%/2)] ">
 
-                                    <article className=" px-6 bg-slate-900 flex flex-col items-center p-6 space-y-6 h-full text-white rounded-2xl ">
+                                    <article className=" px-6 bg-black flex flex-col items-center p-6 space-y-6 h-full text-white rounded-2xl ">
 
                                         <div className="flex gap-3 w-full ">
                                             <div className="flex flex-1 h-48 relative p-3 md:flex-1 md:h-64  lg:flex-1  lg:h-64">
@@ -113,11 +113,11 @@ export function Services() {
                     </div>
 
 
-                    <button className="bg-gray-600 absolute text-white rounded-full flex justify-center items-center p-2 -translate-x-1/2  -translate-y-1/2 top-1/2 left-3  " onClick={scrollPrev}>
+                    <button className="bg-gray-800 absolute text-white rounded-full flex justify-center items-center p-2 -translate-x-1/2  -translate-y-1/2 top-1/2 left-3  " onClick={scrollPrev}>
                         <ChevronLeft className="w-6 h-6 " />
                     </button>
 
-                    <button className="bg-gray-600 absolute text-white rounded-full flex justify-center items-center p-2 -translate-x-1/2  -translate-y-1/2 top-1/2 -right-6  " onClick={scrollNext}>
+                    <button className="bg-gray-800 absolute text-white rounded-full flex justify-center items-center p-2 -translate-x-1/2  -translate-y-1/2 top-1/2 -right-6  " onClick={scrollNext}>
                         <ChevronRight className="w-6 h-6 " />
                     </button>
 

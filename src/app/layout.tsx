@@ -11,11 +11,11 @@ import { AosInit } from "./_components/aos/aos-init";
 
 
 
-const geistSans = Roboto({
+const font = Roboto({
   weight: ["400", "900"],
   subsets:["latin"]
 });
-const font = localFont({
+const fonttt = localFont({
   src: "./fonts/Roboto-VariableFont_wdth,wght.ttf",
   variable: "--font-Roboto-VariableFont",
   weight: "100 900",

@@ -20,6 +20,8 @@ interface PlanosProps {
 
 
 
+
+
 export function Grid({ plano, valor, imagem, porcentagem }: PlanosProps) {
 
 
@@ -27,25 +29,27 @@ export function Grid({ plano, valor, imagem, porcentagem }: PlanosProps) {
 
 
     return (
-        <section id="planos" className="w-full  rounded-md md:w-3/4  bg-slate-900 duration-500 ">
-            <div className="w-full h-full rounded-md  p-2     text-black">
-                <div className="relative w-full h-[280px] mx-auto">
-                    <Image className="object-cover rounded-md" src={imagem} alt="Imagem serviço" quality={100} fill priority />
-                    
+        <section id="planos" className="w-10/12  rounded-md md:w-3/4  bg-slate-900 duration-500 ">
+            <div className="w-full h-full rounded-md overflow-hidden p-2 text-black ">
+                <div className="overflow-hidden">
+                    <div className="relative w-full h-[280px] mx-auto hover:scale-110 duration-500">
+                        <Image className="object-cover rounded-md" src={imagem} alt="Imagem serviço" quality={100} fill priority />
+
+                    </div>
                 </div>
 
-                <div className="flex items-center justify-center flex-col gap-4 w-full  border-slate-200  border " >
+                <div className="flex items-center overflow-hidden justify-center flex-col gap-4 w-full  border-slate-200  border " >
 
-                    <div className="relative w-full h-[280px] rounded-md">
-                        <Image className="object-cover rounded-md" src={bg} alt="Imagem fundo" fill />
-                        <div className="absolute inset-0 opacity-90 bg-slate-900 ">
+                    <div className="relative w-full h-[280px] rounded-md hover:scale-110 duration-500">
+                        
+                        <div className="absolute inset-0 opacity-100 bg-black ">
 
                         </div>
                     </div>
 
                     <div className="absolute text-white  flex items-center  flex-col gap-4 p-2 ">
                         <div>
-                            <h1 className="text-center font-serif text-xl font-bold md:text-3xl">{plano}</h1>
+                            <h1 className={`text-center  text-xl font-bold md:text-3xl`}>{plano}</h1>
                         </div>
 
 
