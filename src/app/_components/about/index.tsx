@@ -21,7 +21,7 @@ export function About() {
 
                 <div className="relative">
 
-                    <div  className="w-5/12 flex justify-start -top-56 items-start  absolute  h-svh right-0">
+                    <div id="sobre" className="w-5/12 flex justify-start -top-56 items-start  absolute  h-svh right-0">
                         <div data-aos="fade-down" data-aos-delay="1000" className="flex  relative w-full h-56 justify-start items-start  lg:h-72">
                             <Image className="object-contain  opacity-100" fill src={banana1} alt="Frutas background" />
                         </div>

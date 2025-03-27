@@ -22,7 +22,7 @@ export function Planos() {
 
                 
 
-                <div className="w-3/12  flex justify-start  items-start -top-36 right-0 absolute h-svh ">
+                <div id="planos" className="w-3/12  flex justify-start  items-start -top-36 right-0 absolute h-svh ">
                     <div data-aos="fade-up" data-aos-delay="500" className="flex relative w-full h-36  justify-start items-start  md:h-36">
                         <Image className="object-contain border-none opacity-100" fill src={pera1} alt="Frutas background" />
                     </div>
@@ -34,7 +34,7 @@ export function Planos() {
 
                         <article className="text-black w-full  ">
                             <h1 className="text-2xl font-bold mb-4 text-center font-serif md:text-4xl">Planos</h1>
-                            <div className="flex z-20 w-full justify-center relative ">
+                            <div  className="flex z-20 w-full justify-center relative ">
                                 <Grid imagem={treino1} plano="Consultoria" valor="R$1900" porcentagem="5" />
 
 

@@ -91,12 +91,21 @@ export function Header() {
 
 
             <Container>
-                <div className="absolute top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
+                <div className="absolute  top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
                     <div className=" relative w-full gap-12 z-20  flex justify-center items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row">
-                        <button id="planos">Planos</button>
-                        <button id="planos">Planos</button>
-                        <button id="planos">Planos</button>
-                        <button id="planos">Planos</button>
+                        <a href="#planos" className="transition-all duration-500">
+                        <button>Planos</button>
+                        </a>
+                        <a href="#sobre" className="transition-all duration-500">
+                        <button>Sobre</button>
+                        </a>
+                        <a href="#depoimentos" className="transition-all duration-500">
+                        <button>Depoimentos</button>
+                        </a>
+                        <a href="#contatos" className="transition-all duration-500">
+                        <button>Contatos</button>
+                        </a>
+                       
 
 
                     </div>
