@@ -8,7 +8,7 @@ import { useContext, useEffect, useState } from "react";
 import { api } from "@/services/apiClient";
 import Link from "next/link";
 import { AuthContext } from "@/context/user/AuthContext";
-import logo from "../../../../public/logo.png"
+import logo from "../../../../public/White@4x.png"
 import maça from "../../../../public/testeFrutas/maça-1.png"
 export function Header() {
 
@@ -31,10 +31,12 @@ export function Header() {
                 if (name && email) {
                     setUSer(name)
                     setHasUser(true)
+                    return
                 }
 
             } catch (err) {
                 console.log(err.message)
+                return
             }
         }
 
@@ -48,21 +50,17 @@ export function Header() {
     }
 
     return (
-        <section className="w-full relative bg-slate-900  ">
+        <section className="w-full h-[calc(100vh-50vh)] bg-black relative   ">
 
 
-            <div className="w-5/12  flex justify-start  items-start my-auto top-96 py-10 left-0 absolute  h-svh ">
-                <div className="relative w-full h-16 flex justify-start items-start  md:h-36 lg:-left-32 ">
-                    <Image data-aos="fade-up" data-aos-delay="500" className="object-contain opacity-100" fill src={maça} alt="Frutas background" />
-                </div>
-            </div>
 
 
-            <div className="absolute w-2/12 bg-black h-full mx-auto justify-center items-center mask-image-gradient ">
-                <div className="w-32 h-32 z-20 relative m-2 my-16 flex justify-start items-start md:my-2">
+
+            <div className="absolute w-2/12 h-full my-2  justify-center items-start">
+                <div className="w-10/12 h-2/4 z-20 relative mx-auto flex justify-center items-center ">
                     <Image
-                        
-                        className="object-cover rounded-full opacity-40"
+
+                        className="object-contain  opacity-40"
                         fill
                         quality={100}
                         priority
@@ -72,16 +70,16 @@ export function Header() {
                 </div>
             </div>
 
-            <div className="relative flex w-12/12 justify-end ml-auto h-[400px] z-10 mask-image-gradient md:w-10/12 ">
-                <Image
-                    className="object-cover"
-                    fill
-                    quality={100}
-                    priority
-                    src={treinoHeader}
-                    alt="Imagem header"
-                />
-                <div className="absolute inset-0 opacity-60 bg-black"></div>
+            <div className="relative  flex w-10/12  justify-end ml-auto h-full z-10  md:w-10/12 ">
+
+
+
+
+                <div className="bg-fixed rounded-full bg-cover bg-center w-full h-full" style={{ backgroundImage: "url('imgheader001.jpg')" }}>
+
+                </div>
+
+                <div className="absolute inset-0 rounded-full opacity-60 bg-black"></div>
             </div>
 
 
@@ -91,38 +89,44 @@ export function Header() {
 
 
             <Container>
-                <div className="absolute  top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
-                    <div className=" relative w-full gap-12 z-20  flex justify-center items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row">
+                <div className="absolute   top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
+                    <div className=" relative w-11/12 gap-4 z-20  flex justify-end items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row md:w-8/12 md:gap-6 lg:w-6/12 lg:gap-8 ">
                         <a href="#planos" className="transition-all duration-500">
-                        <button>Planos</button>
+                            <button>Planos</button>
                         </a>
                         <a href="#sobre" className="transition-all duration-500">
-                        <button>Sobre</button>
+                            <button>Sobre</button>
                         </a>
                         <a href="#depoimentos" className="transition-all duration-500">
-                        <button>Depoimentos</button>
+                            <button>Depoimentos</button>
                         </a>
                         <a href="#contatos" className="transition-all duration-500">
-                        <button>Contatos</button>
+                            <button>Contatos</button>
                         </a>
-                       
+
 
 
                     </div>
-                    <div className="relative flex z-20 w-fit text-white justify-end px-2  max-w-7xl">
-                        {hasUser ? <div className="flex gap-10">
-                            <Link href={"/dashboard"}>
-                                <button><User2 /></button>
-                            </Link>
 
-                            <Link href={"/dashboard"}>
-                                <button onClick={LogoutUser}><LogOut /></button>
-                            </Link>
-                        </div>
+                    <div className="relative flex z-20 w-1/12 text-white justify-end items-centermax-w-7xl">
+                        {hasUser ?
+                            <div className="flex justify-center items-center gap-4 md:gap-6 lg:gap-8">
+                                <Link href={"/dashboard"}>
+                                    <button><User2 className="size-5 md:size-6" /></button>
+                                </Link>
+                                <Link href={"/dashboard"}>
+                                    <button><User2 className="size-5 md:size-6" /></button>
+                                </Link>
 
-                            : <Link href={"/login"}>
-                                <button><LogIn /></button>
+
+                                <button onClick={LogoutUser}><LogOut className="size-5 md:size-6" /></button>
+
+                            </div>
+                            :
+                            <Link className="flex justify-center items-center" href={"/login"}>
+                                <button><LogIn className="size-5 md:size-6" /></button>
                             </Link>}
+                            
                     </div>
                 </div>
 

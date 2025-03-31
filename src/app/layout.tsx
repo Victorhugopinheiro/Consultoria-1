@@ -8,12 +8,13 @@ import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import { Roboto } from "next/font/google";
 import { AosInit } from "./_components/aos/aos-init";
+import { Toaster } from "sonner";
 
 
 
 const font = Roboto({
   weight: ["400", "900"],
-  subsets:["latin"]
+  subsets: ["latin"]
 });
 const fonttt = localFont({
   src: "./fonts/Roboto-VariableFont_wdth,wght.ttf",
@@ -35,10 +36,19 @@ export default function RootLayout({
       <body
         className={`${font.className}  antialiased`}
       >
-
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              backgroundColor: "#f1f1f1",
+              color: "#131313",
+              borderColor: "rgba(255, 255, 255, 0.5)"
+            }
+          }}
+        />
         <AuthProvider>
           {children}
-          <AosInit/>
+          <AosInit />
         </AuthProvider>
 
       </body>

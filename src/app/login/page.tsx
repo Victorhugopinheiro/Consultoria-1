@@ -47,17 +47,17 @@ export default function Login() {
 
     <Container>
       <Head>
-        <title className="">Login</title>
+        <title className="">ENTRAR</title>
       </Head>
       <section className="flex bg-slate-900 text-white justify-center items-center h-svh  ">
         <div className="flex justify-center items-center flex-col gap-3 w-full ">
-          <h1 className="text-2xl font-bold md:text-3xl">Login</h1>
+          <h1 className="text-xl font-bold md:text-2xl lg:text-3xl">ENTRAR</h1>
 
           <form className="flex flex-col w-full gap-3 justify-center items-center px-6 ">
             <input placeholder={"Email"} onChange={(e) => setEmail(e.target.value)} value={email} className="h-12 w-10/12 mb-2 py-1 px-2 decoration-none bg-slate-700 rounded-md md:w-2/5 ">
             </input>
 
-            <input placeholder={"Senha"} onChange={(e) => setPassword(e.target.value)} value={password} className="h-12 w-10/12 mb-2 py-1 px-2 decoration-none bg-slate-700 rounded-md m md:w-2/5  ">
+            <input placeholder={"Senha"} onChange={(e) => setPassword(e.target.value)} value={password} className="h-12 w-10/12 mb-2 py-1 px-2 decoration-none bg-slate-700 rounded-md md:w-2/5  ">
             </input>
 
 

@@ -36,11 +36,11 @@ export default function Login() {
 
         <Container>
 
-            <title className="text-3xl">Login</title>
+            <title className="text-3xl">CADASTRAR</title>
 
             <section className="flex bg-slate-900 text-white justify-center items-center h-svh  ">
                 <div className="flex justify-center items-center flex-col gap-3 w-full ">
-                    <h1 className="text-2xl font-bold md:text-3xl">Login</h1>
+                    <h1 className="text-xl font-bold md:text-2xl lg:text-3xl">CADASTRAR</h1>
                     <form className="flex flex-col w-full gap-3 justify-center items-center px-6 ">
                         <div className="w-full md:flex justify-center items-center gap-3">
                             <input value={email}

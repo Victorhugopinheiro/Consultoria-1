@@ -59,7 +59,7 @@ export function Services() {
 
 
     return (
-        <section id="depoimentos" className="bg-white py-10 my-16  text-black">
+        <section id="depoimentos" className="bg-slate-300 py-10 my-16  text-black">
             <div className="container mx-auto px-4">
                 <h1 className="text-2xl text-center font-serif font-bold mb-6 md:text-3xl lg:text-4xl">Depoimentos dos nossos clientes</h1>
                 <div className="relative">

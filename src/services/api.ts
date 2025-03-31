@@ -5,12 +5,12 @@ import { AuthTokenError } from './errors/AuthTokenError'
 
 import { signOut } from '@/context/user/AuthContext';
 
-export function setupAPIClient(ctx = undefined){
+export function setupAPIClient(ctx = undefined) {
   let cookies = parseCookies(ctx);
 
   const api = axios.create({
     baseURL: process.env.NEXT_PUBLIC_API_URL,
-    headers:{
+    headers: {
       Authorization: `Bearer ${cookies['@consultoria']}`
     }
   })
@@ -18,11 +18,13 @@ export function setupAPIClient(ctx = undefined){
   api.interceptors.response.use(response => {
     return response;
   }, (error: AxiosError) => {
-    if(error.response.status === 401){
-      if(typeof window !== undefined){
-        signOut();
-    
-      }else{
+    if (error.response.status === 401) {
+      if(typeof window !== undefined) {
+        window.location.replace("/login")
+
+        return
+
+      } else {
         return Promise.reject(new AuthTokenError())
       }
     }

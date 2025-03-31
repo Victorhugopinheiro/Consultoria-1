@@ -5,7 +5,7 @@ import alimento from "../../../../public/dieta.jpeg"
 import useEmblaCarousel from "embla-carousel-react"
 import { Flex, Text } from "@chakra-ui/react";
 import pera1 from "../../../../public/testeFrutas/pera03.webp"
-import banana1 from "../../../../public/testeFrutas/banana-01.jpeg"
+import banana1 from "../../../../public/testeFrutas/bananareal01.png"
 
 
 
@@ -36,6 +36,9 @@ export function About() {
                         </div>
 
 
+                        
+
+
                         <div data-aos="fade-up" data-aos-delay="500" className="flex z-10 lg:flex-[0_0_calc(100%/2)] text-white  rounded-md lg:-translate-y-28 lg:text-black lg:translate-x-28 ">
                             <article className="max-w-xl flex justify-center items-center p-6 opacity-100  flex-col">
                                 <h1 className="text-2xl text-center font-bold z-10  mb-2">Quem somos?</h1>
@@ -49,7 +52,7 @@ export function About() {
 
                             </article>
 
-                            <div className="absolute inset-0 opacity-70 rounded-md bg-slate-900 lg:bg-slate-200 ">
+                            <div className="absolute inset-0 opacity-70 rounded-md bg-slate-900 lg:bg-slate-100 ">
 
                             </div>
                         </div>

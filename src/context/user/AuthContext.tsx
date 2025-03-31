@@ -3,10 +3,12 @@
 import { createContext, ReactNode, useEffect, useState } from 'react'
 import { destroyCookie, setCookie } from 'nookies'
 import { useRouter } from 'next/navigation'
+import { redirect } from 'next/navigation'
 
 import { api } from '@/services/apiClient'
 import { getCookieClient } from '@/lib/cookieClient'
 import { consumers } from 'stream'
+import { toast } from 'sonner'
 
 interface AuthContextData {
   user: UserProps;
@@ -19,7 +21,7 @@ interface AuthContextData {
   openModal: () => void;
   controlModal: boolean;
   closeButton: () => void;
-  heighPage: (height:boolean) => void;
+  heighPage: (height: boolean) => void;
   height: boolean
 }
 
@@ -70,6 +72,7 @@ export function signOut() {
   console.log("ERORR LOGOUT");
   try {
     destroyCookie(null, '@consultoria', { path: '/' })
+
 
 
   } catch (err) {
@@ -139,8 +142,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
+      toast.success("Logado com sucesso")
+      window.location.reload()
 
-      router.push('/dashboard')
 
 
     } catch (err) {
@@ -162,7 +166,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       telefone
     })
 
-    console.log("cadastro feito com sucesso")
+    window.location.replace("/login")
   }
 
   async function logoutUser() {
