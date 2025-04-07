@@ -123,11 +123,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
       setCookie(undefined, '@consultoria', token, {
         maxAge: 60 * 60 * 24 * 30, // Expirar em 1 mês
-        path: '/'
+        path: '/',
       })
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`
     }
-    catch (err) {
+    catch(err){
       console.log("ERRO AO ENTRAR", err)
       return
     }

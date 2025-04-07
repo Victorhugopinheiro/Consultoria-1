@@ -39,13 +39,6 @@ export default function Login() {
       })
       return
     }
-
-    toast("Sucesso",{
-      duration:5000
-    })
-
-
-
   }
 
   return (
