@@ -9,6 +9,7 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "@/context/user/AuthContext";
 import Router from 'next/router'
 import { redirect } from "next/navigation"
+import { toast } from "sonner";
 
 
 
@@ -30,13 +31,18 @@ export default function Login() {
         email,
         password
       })
-
-
-
     }
     catch (err) {
       console.log(err)
+      toast("Erro",{
+        duration:5000
+      })
+      return
     }
+
+    toast("Sucesso",{
+      duration:5000
+    })
 
 
 

@@ -63,7 +63,7 @@ export function About() {
 
 
                             <div data-aos="fade-up" className="relative flex justify-center  items-center w-full h-full lg:h-[400px] ">
-                                <Image className="object-cover  rounded-md" fill quality={100} priority src={alimento} alt="Foto de um alimento" />
+                                <Image className="object-cover rounded-md" fill quality={100} priority src={alimento} alt="Foto de um alimento" />
 
                                 <div className="absolute inset-0 opacity-20 rounded-md bg-slate-900 ">
 

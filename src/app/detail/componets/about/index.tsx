@@ -1,6 +1,7 @@
 
 import Image from "next/image"
 import frutas from "../../../../../public/testeFrutas/banana-01.jpeg"
+import logo from "../../../../../public/color@4x.png"
 import { Check } from "lucide-react"
 import { Button } from "../buttton"
 import { useContext, useEffect, useState } from "react"
@@ -28,29 +29,30 @@ export function AboutProduto() {
 
     return (
 
-        <div className="bg-white relative w-full flex flex-col md:flex-row transition-all duration-300  justify-start">
-          
+        <div className="bg-white my-16 h-full relative w-full flex flex-col md:flex-row transition-all duration-300  justify-start">
 
 
 
 
 
             <div className="relative text-black flex 
-                flex-col w-full h-[1000px] md:h-[800px] md:w-9/12 lg:w-9/12 my-28  bg-slate-900  ">
-                <Image className="object-cover" fill quality={100} priority={true} src={frutas} alt="imagem Frutas" />
+                flex-col w-full h-full md:h-full md:w-9/12 lg:w-9/12">
 
 
 
-                <div className="relative  w-full h-[1000px] md:h-[800px] lg:h-[800px]  ">
 
-                    {controlModal && height && <ModalDevolucao />}
-                    <div className="absolute inset-0 opacity-100 rounded-[10px_0px_0px_10px] bg-slate-100 ">
+                {controlModal && height && <ModalDevolucao />}
+
+                <div className="relative  w-full h-[1000px] md:h-[880px]  ">
+
+
+                    <div className="absolute inset-0 opacity-100 rounded-[10px_0px_0px_10px] bg-white ">
 
                     </div>
                 </div>
 
 
-                <div className="absolute w-full pt-10 flex flex-col justify-center items-center ">
+                <div className="absolute w-full h-full pt-10  flex flex-col justify-center items-center ">
                     <h1 className="text-3xl text-center font-bold mb-5">Detalhes</h1>
 
 
@@ -69,6 +71,13 @@ export function AboutProduto() {
 
                         Seu melhor começa aqui!</p>
 
+
+                    <div className="w-full h-full p-10 flex justify-end items-end">
+                        <div className="relative w-36 h-36 ">
+                            <Image src={logo} alt="Logo consultoria" />
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -76,10 +85,11 @@ export function AboutProduto() {
 
 
             <div className={
-                `${height ? "hidden md:flex w-3/12 h-full  flex-col items-center sticky top-0 gap-3 justify-between  rounded-[10px_10px_10px_10px] lg:h-[696px] bg-white" : "hidden"}`}>
+                `${height ?
+                    "hidden transition-all md:flex w-3/12 h-full md:transition-all duration-300 pt-1 pr-2  flex-col items-center sticky top-0 gap-3 justify-between  rounded-md lg:h-[730px] " : "hidden transition-all"}`}>
 
 
-                <div className=" flex flex-col w-full  sticky gap-3 justify-between  bg-slate-100 text-black rounded-[0px_0px_10px_0px] p-3 h-[350px] md:h-[450px] lg:h-full">
+                <div className=" flex flex-col w-full  sticky gap-3 justify-between bg-white border border-black  text-black rounded-md p-3 h-full md:h-full lg:h-full">
                     <div className="w-full">
                         <div className="flex justify-center">
                             <span className="text-gray-800 mb-3 text-center">Referencia no mercado</span>
@@ -101,7 +111,7 @@ export function AboutProduto() {
                             </div>
 
 
-                            <div className="mt-6 w-full  flex flex-col p-3 bg-slate-100 rounded-md">
+                            <div className="mt-6 w-full  flex flex-col p-3 bg-white rounded-md">
                                 <FormComponent />
                             </div>
                         </div>
@@ -116,9 +126,9 @@ export function AboutProduto() {
 
                     </div>
 
-                    <div className="flex justify-start gap-8 text-sm md:justify-normal md:gap-2  lg:text-base lg:justify-between">
-                        <span className="flex gap-1">Segurança <Check color="green" /></span>
-                        <button onClick={openModal} className="">Devolução </button>
+                    <div className="flex justify-between gap-8 text-sm md:justify-normal  md:gap-2 lg:text-base lg:justify-between">
+                        <span className="flex items-center">Segurança <Check color="green" size={16} /></span>
+                        <button onClick={openModal} className="font-bold">Devolução </button>
                     </div>
 
                 </div>

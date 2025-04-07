@@ -1,13 +1,8 @@
 "use client"
-
-import { createContext, ReactNode, useEffect, useState } from 'react'
+import { createContext, ReactNode, use, useEffect, useState } from 'react'
 import { destroyCookie, setCookie } from 'nookies'
 import { useRouter } from 'next/navigation'
-import { redirect } from 'next/navigation'
-
 import { api } from '@/services/apiClient'
-import { getCookieClient } from '@/lib/cookieClient'
-import { consumers } from 'stream'
 import { toast } from 'sonner'
 
 interface AuthContextData {
@@ -72,17 +67,16 @@ export function signOut() {
   console.log("ERORR LOGOUT");
   try {
     destroyCookie(null, '@consultoria', { path: '/' })
-
-
-
   } catch (err) {
     console.log("Error ao sair")
+    return
   }
+  window.location.href = "/login"
 }
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<UserProps>()
-  const isAuthenticated = !!user;
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [contextPlano, setContextPlano] = useState<tiposDeMensalidade>({
     plano: "Mensal",
     valor: "600",
@@ -131,48 +125,45 @@ export function AuthProvider({ children }: AuthProviderProps) {
         maxAge: 60 * 60 * 24 * 30, // Expirar em 1 mês
         path: '/'
       })
-
-      setUser({
-        id,
-        name,
-        email,
-        endereço,
-        subscriptions
-      })
-
       api.defaults.headers.common['Authorization'] = `Bearer ${token}`
-
-      toast.success("Logado com sucesso")
-      window.location.reload()
-
-
-
-    } catch (err) {
-      console.log("ERRO AO ENTRAR", err)
     }
+    catch (err) {
+      console.log("ERRO AO ENTRAR", err)
+      return
+    }
+    window.location.href = "/"
+    toast.success("Logado com sucesso")
   }
 
 
   async function signUp({ email, name, password, telefone }: SignUpProps) {
 
     if (!email || !name || !password || !telefone) {
+      toast.warning("Todos os campos obrigatórios")
       return console.log("preencha todos os campos")
     }
 
-    const response = await api.post("/users", {
-      email,
-      name,
-      password,
-      telefone
-    })
+    try {
+      const response = await api.post("/users", {
+        email,
+        name,
+        password,
+        telefone
+      })
+    } catch (err) {
+      console.log(err)
+      return
+    }
+    window.location.href = "/login"
 
-    window.location.replace("/login")
+
   }
 
   async function logoutUser() {
     try {
       destroyCookie(null, "@consultoria", { path: '/' })
       setUser(null)
+      window.location.href = "/"
     } catch (err) {
       console.log(err)
     }
@@ -208,6 +199,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
   function heighPage(height: boolean) {
     setHeight(height)
   }
+
+
 
 
 

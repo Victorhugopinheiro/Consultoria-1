@@ -24,15 +24,15 @@ export function Footer() {
 
                             <p>Extraindo seu potencial máximo.</p>
 
-                            <a className="py-1 px-3 w-fit bg-green-500 rounded-md">Contato via WhatssApp</a>
+                            <a href={`https://wa.me/11983168952?text=Olá vim pelo site e gostaria de mais informações`} className="bg-green-500 px-3 py-1 rounded-md text-white ">Contato via WhatsApp</a>
                         </div>
 
 
                         <div className=" flex flex-col items-center justify-center  ">
                             <h3 className="text-2xl font-bold">Contatos</h3>
 
-                            <p>Email: teste@teste.com</p>
-                            <p>Telefone: (xx) 97678-8673</p>
+                            <p>Email: vibeesportenutrição@gmail.com</p>
+                            <p>Telefone: (11) 98316-8952</p>
                             <p>Endereço: Rua Tal, 190, centro, Sbc</p>
 
 
@@ -42,9 +42,9 @@ export function Footer() {
                             <h3 className="text-2xl font-bold">Redes sociais</h3>
 
                             <div className="flex gap-3 mt-2">
-                                <Facebook size={16} />
-                                <Instagram size={16} />
-                                <BsWhatsapp size={16} />
+                                <a href=""><Facebook size={18} /></a>
+                                <a href="https://www.instagram.com/vibeesportenutricao/"><Instagram size={18} /></a>
+                                <a href="`https://wa.me/11983168952?text=Olá vim pelo site e gostaria de mais informações`"><BsWhatsapp size={18} /></a>
                             </div>
 
 

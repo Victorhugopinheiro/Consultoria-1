@@ -14,19 +14,19 @@ export function Button() {
 
         try {
             const apiClient = setupAPIClient()
-          
+
 
             const response = await apiClient.post("/subscribe")
 
 
-            const{sessionId} = response.data
+            const { sessionId } = response.data
 
 
             const stripe = await getStripeJs()
-            await stripe.redirectToCheckout({sessionId:sessionId})
+            await stripe.redirectToCheckout({ sessionId: sessionId })
 
 
-           
+
 
 
         } catch (err) {
@@ -36,9 +36,9 @@ export function Button() {
 
     return (
 
-        <div className="flex justify-center w-full">
-            <div className="py-3 cursor-pointer px-3 w-3/5 flex justify-center mt-6 rounded-md bg-green-500 hover:scale-105 duration-300 font-bold  md:w-full">
-                <button type="submit">Comprar</button>
+        <div className="flex justify-center h-full w-full">
+            <div className=" cursor-pointer  w-full flex justify-center mt-6 rounded-md bg-green-500 hover:scale-105 duration-300 font-bold  md:w-full">
+                <button className="w-full h-full py-3 px-6 rounded-md" type="submit">Comprar</button>
             </div>
         </div>
     )

@@ -5,22 +5,23 @@ import Image from "next/image"
 import treino from "../../../../public/Treinoheader2.0.jpg"
 import { Check } from "lucide-react"
 import { Footer } from "@/app/_components/footer"
-import { Button } from "../componets/buttton"
+import { Button } from "@/app/detail/componets/buttton"
 import { api } from "@/services/apiClient"
 import { getCookieServer } from "@/lib/cookieServer"
-import { AboutProduto } from "../componets/about"
+import { AboutProduto } from "@/app/detail/componets/about"
 import { FormEvent, useContext, useEffect, useState } from "react"
 import { AuthContext } from "@/context/user/AuthContext"
 import { getCookieClient } from "@/lib/cookieClient"
 import { setupAPIClient } from "@/services/api"
 import { getStripeJs } from "@/services/stripe-js"
-import { ModalDevolucao } from "../componets/modalDevolucao/modalDevolucao"
-import { FormComponent } from "../componets/form"
-import { SideScroll } from "../componets/sideScroll"
+import { ModalDevolucao } from "@/app/detail/componets/modalDevolucao/modalDevolucao"
+import { FormComponent } from "@/app/detail/componets/form"
+import { SideScroll } from "@/app/detail/componets/sideScroll"
+import { Me } from "@/app/_components/header/component/myHeader"
 
 
 
-export default function Detail() {
+export function MyConsultoria() {
 
 
     const { myPlano, contextPlano, openModal, controlModal, closeButton, heighPage, height } = useContext(AuthContext)
@@ -82,18 +83,20 @@ export default function Detail() {
             <Container>
 
                 <div className="">
-                    <div className="bg-white w-full flex flex-col md:flex-row rounded-[10px_10px_0px_0px] ">
-                        <div className=" w-full flex justify-center h-[350px] md:h-[450px] md:w-9/12 lg:h-[500px] lg:w-9/12  rounded-md">
+                    <div className="bg-white rounded-md border-b p-2 border-gray-300 mx-auto  w-full h-full flex flex-col md:flex-row ">
+
+                        <div className=" w-full flex justify-center h-full md:h-[450px] md:w-9/12 lg:h-full lg:w-9/12  rounded-[10px_0px_0px_10px]">
                             <SideScroll />
 
                             {controlModal && !height && <ModalDevolucao />}
                         </div>
 
                         <div className={
-                            `${height ? "hidden" : "flex w-full flex-col items-center sticky top-0 gap-3 justify-between  rounded-[10px_10px_10px_10px] md:w-3/12  bg-white"}`}>
+                            `${height ? "hidden" : "flex w-full flex-col items-center sticky top-0 gap-3 justify-between  rounded-[0px_10px_10px_0px] md:w-3/12  bg-white"}`}>
 
 
-                            <div className=" flex flex-col w-full  sticky gap-3 justify-between rounded-[0px_0px_10px_0px] bg-slate-100 text-black   p-3 h-[400px] md:h-[450px] lg:h-full">
+                            <div className="
+                             flex flex-col w-full border border-black sticky gap-3 justify-between rounded-[0px_10px_10px_0px] bg-white text-black   p-3 h-full md:h-full lg:h-full">
                                 <div className="w-full">
                                     <div className="flex justify-center">
                                         <span className="text-gray-800 mb-3 text-center">Referencia no mercado</span>
@@ -130,9 +133,9 @@ export default function Detail() {
 
                                 </div>
 
-                                <div className="flex justify-start gap-8 text-sm md:justify-normal  md:gap-2 lg:text-base lg:justify-between">
-                                    <span className="flex ">Segurança <Check color="green" /></span>
-                                    <button onClick={openModal} className="">Devolução </button>
+                                <div className="flex justify-between gap-8 text-sm md:justify-normal  md:gap-2 lg:text-base lg:justify-between">
+                                    <span className="flex items-center">Segurança <Check color="green" size={16} /></span>
+                                    <button onClick={openModal} className="font-bold">Devolução </button>
                                 </div>
 
                             </div>
@@ -151,7 +154,7 @@ export default function Detail() {
 
             </Container>
 
-            <Footer />
+           
 
         </>
 

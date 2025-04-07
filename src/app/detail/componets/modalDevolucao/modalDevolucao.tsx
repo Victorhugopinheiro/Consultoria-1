@@ -10,7 +10,7 @@ export function ModalDevolucao() {
 
     return (
         <div className={!height ? "absolute mx-auto flex justify-center max-w-7xl w-full h-full top-0 z-40 px-1" : "absolute mx-auto flex justify-center max-w-7xl w-full h-full top-0 z-40 px-1"}>
-            <div className={!height ? "w-10/12 h-2/4 sticky top-0 bg-white text-black rounded-md p-2 flex flex-col justify-center items-center md:w-3/5 lg:w-2/4" : "w-10/12 h-2/4 sticky top-0 bg-white text-black rounded-md p-2 flex flex-col justify-center items-center md:w-4/5 md:h-3/5 lg:w-3/4 lg:h-3/5"}>
+            <div className={!height ? "w-full h-3/4 sticky top-10 bg-slate-900 text-white rounded-md p-2 flex flex-col justify-center items-center md:w-4/5 lg:w-3/4" : "w-full h-3/4 sticky top-10 bg-slate-900 text-white rounded-md p-2 flex flex-col justify-center items-center md:w-5/5  lg:h-4/5"}>
                 <div className="flex justify-end w-full">
                     <button className="flex justify-end" onClick={closeButton}><ShieldClose /></button>
                 </div>

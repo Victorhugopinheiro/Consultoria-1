@@ -51,10 +51,12 @@ async function validateToken(token: string) {
                 Authorization: `Bearer ${token}`
             }
         })
-
+        console.log("trueeeeeeeeeeeeeee")
         return true
     } catch (err) {
+        console.log("falseeeeee")
         return false
+        
     }
 }
 

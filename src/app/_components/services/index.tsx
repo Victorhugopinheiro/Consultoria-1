@@ -59,16 +59,16 @@ export function Services() {
 
 
     return (
-        <section id="depoimentos" className="bg-slate-300 py-10 my-16  text-black">
+        <section id="depoimentos" className="bg-slate-200 py-10 my-16  text-black">
             <div className="container mx-auto px-4">
                 <h1 className="text-2xl text-center font-serif font-bold mb-6 md:text-3xl lg:text-4xl">Depoimentos dos nossos clientes</h1>
                 <div className="relative">
                     <div className="overflow-hidden" ref={emblaRef}>
-                        <div className="flex">
+                        <div className="flex gap-2  ">
                             {testimonials.map((item, index) => (
-                                <div key={index} className="flex-[0_0_100%] min-w-0 px-3 lg:flex-[0_0_calc(100%/2)] ">
+                                <div key={index} className="flex-[0_0_100%]  rounded-md border-x-2  border-slate-800 min-w-0  lg:flex-[0_0_calc(99%/2)] ">
 
-                                    <article className=" px-6 bg-black flex flex-col items-center p-6 space-y-6 h-full text-white rounded-2xl ">
+                                    <article className=" bg-white border-x-4   border-y-2 border-slate-900   flex flex-col items-center p-6 space-y-6 h-full text-black rounded-md ">
 
                                         <div className="flex gap-3 w-full ">
                                             <div className="flex flex-1 h-48 relative p-3 md:flex-1 md:h-64  lg:flex-1  lg:h-64">
