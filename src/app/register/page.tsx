@@ -23,12 +23,17 @@ export default function Login() {
 
 
     async function handleLogin() {
-        await signUp({
-            email,
-            password,
-            name,
-            telefone
-        })
+        try {
+            await signUp({
+                email,
+                password,
+                name,
+                telefone
+            })
+        }catch(err){
+            console.log(err)
+            return
+        }
     }
 
     return (

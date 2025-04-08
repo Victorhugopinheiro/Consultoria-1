@@ -38,8 +38,8 @@ type AuthProviderProps = {
 }
 
 interface SignInProps {
-  email: string;
-  password: string;
+  email: string | FormDataEntryValue;
+  password: string | FormDataEntryValue;
 }
 
 interface SignUpProps {
@@ -112,6 +112,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const router = useRouter()
 
   async function signIn({ email, password }: SignInProps) {
+
+    if(!email || !password){
+      console.log("Preencha todos os campos")
+      return
+    }
     try {
       const response = await api.post("/session", {
         email,
