@@ -66,9 +66,9 @@ export function Services() {
                     <div className="overflow-hidden" ref={emblaRef}>
                         <div className="flex gap-2  ">
                             {testimonials.map((item, index) => (
-                                <div key={index} className="flex-[0_0_100%]  rounded-md border-x-2  border-slate-800 min-w-0  lg:flex-[0_0_calc(99%/2)] ">
+                                <div key={index} className="flex-[0_0_100%]  rounded-md border-x-4 border-y-2  border-slate-800 min-w-0  lg:flex-[0_0_calc(99%/2)] ">
 
-                                    <article className=" bg-white border-x-4   border-y-2 border-slate-900   flex flex-col items-center p-6 space-y-6 h-full text-black rounded-md ">
+                                    <article className=" bg-white  border-slate-900   flex flex-col items-center p-6 space-y-6 h-full text-black rounded-md ">
 
                                         <div className="flex gap-3 w-full ">
                                             <div className="flex flex-1 h-48 relative p-3 md:flex-1 md:h-64  lg:flex-1  lg:h-64">

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
-import treinoHeader from "../../../../public/Treinoheader2.0.jpg"
+import treinoHeader from "../../../../../../public/imgheader001.jpg"
 import { LogIn, LogOut, User2 } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { api } from "@/services/apiClient";
@@ -41,14 +41,14 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
     return (
         <>
-            <section className="w-full h-[calc(100vh-50vh)] bg-white relative shadow-lg shadow-slate-600   ">
+            <section className="w-full h-[calc(100vh-50vh)] bg-white  relative shadow-lg shadow-slate-600   ">
 
 
 
 
 
-                <div className="absolute w-2/12 h-full my-2  justify-center items-start">
-                    <div className="w-10/12 h-2/4 z-20 relative mx-auto flex justify-center items-center ">
+                <div className="absolute w-4/12 h-full my-2  justify-center items-start md:w-4/12 lg:w-4/12">
+                    <div className="w-11/12 h-2/4 z-20  relative mx-auto flex justify-center items-center ">
                         <Image
 
                             className="object-contain "
@@ -61,17 +61,17 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
                     </div>
                 </div>
 
-                <div className="relative  flex w-10/12  justify-end ml-auto h-full z-10  md:w-10/12 ">
+                <div className="relative  flex w-8/12 bg-blue-400 p-2 justify-end items-end ml-auto h-full z-10  md:w-8/12">
 
 
 
-
-                    <div className="bg-fixed rounded-full  bg-no-repeat bg-cover bg-top w-full h-full" style={{ backgroundImage: "url('imgheader001.jpg')" }}>
-
+                    <div className="w-full  h-full rounded-full relative ">
+                        <Image className="object-cover lg:object-cover " priority fill quality={100} alt="Header" src={treinoHeader} />
                     </div>
-                    
 
-                    <div className="absolute inset-0 rounded-full opacity-60 bg-black"></div>
+
+
+
                 </div>
 
 
@@ -82,18 +82,18 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
                 <Container>
                     <div className="absolute   top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
-                        <div className=" relative w-10/12 gap-4 z-20  flex justify-end items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row md:w-8/12 md:gap-6 lg:w-6/12 lg:gap-8 ">
+                        <div className=" relative w-10/12 gap-4 z-20  flex justify-end items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row md:w-8/12 md:gap-6 lg:w-10/12 lg:gap-8 ">
                             <a href="#planos" className="transition-all duration-500">
-                                <button>Planos</button>
+                                <button className="text-white">Planos</button>
                             </a>
                             <a href="#sobre" className="transition-all duration-500">
-                                <button>Sobre</button>
+                                <button className="text-white">Sobre</button>
                             </a>
                             <a href="#depoimentos" className="transition-all duration-500">
-                                <button>Depoimentos</button>
+                                <button className="text-white">Depoimentos</button>
                             </a>
                             <a href="#contatos" className="transition-all duration-500">
-                                <button>Contatos</button>
+                                <button className="text-white">Contatos</button>
                             </a>
 
 
@@ -122,10 +122,10 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
                 </Container>
             </section>
-           
-           
-          
-            
+
+
+
+
 
 
 

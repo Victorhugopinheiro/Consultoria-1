@@ -43,16 +43,10 @@ export function AboutProduto() {
 
                 {controlModal && height && <ModalDevolucao />}
 
-                <div className="relative  w-full h-[1000px] md:h-[880px]  ">
+                
 
 
-                    <div className="absolute inset-0 opacity-100 rounded-[10px_0px_0px_10px] bg-white ">
-
-                    </div>
-                </div>
-
-
-                <div className="absolute w-full h-full pt-10  flex flex-col justify-center items-center ">
+                <div className="relative w-full h-full pt-10  flex flex-col justify-center items-center ">
                     <h1 className="text-3xl text-center font-bold mb-5">Detalhes</h1>
 
 
