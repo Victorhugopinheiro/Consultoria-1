@@ -96,7 +96,7 @@ export function MyConsultoria() {
 
 
                             <div className="
-                             flex flex-col w-full border border-black sticky gap-3 justify-between rounded-[0px_10px_10px_0px] bg-white text-black   p-3 h-full md:h-full lg:h-full">
+                             flex flex-col w-full border border-gray-400 sticky gap-3 justify-between rounded-[0px_10px_10px_0px] bg-white text-black   p-3 h-full md:h-full lg:h-full">
                                 <div className="w-full">
                                     <div className="flex justify-center">
                                         <span className="text-gray-800 mb-3 text-center">Referencia no mercado</span>

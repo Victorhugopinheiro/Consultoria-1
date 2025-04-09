@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
-import treinoHeader from "../../../../../../public/imgheader001.jpg"
+import treinoHeader from "../../../../../../public/treinoHeader.jpg"
 import { LogIn, LogOut, User2 } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { api } from "@/services/apiClient";
 import Link from "next/link";
 import { AuthContext } from "@/context/user/AuthContext";
 import logo from "../../../../../../public/color@4x.png"
-import maça from "../../../../public/testeFrutas/maça-1.png"
+import halter from "../../../../../../public/testeFrutas/peraReal-removebg-preview.png"
 
 
 export interface Me {
@@ -47,8 +47,9 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
 
 
-                <div className="absolute w-4/12 h-full my-2  justify-center items-start md:w-4/12 lg:w-4/12">
-                    <div className="w-11/12 h-2/4 z-20  relative mx-auto flex justify-center items-center ">
+                <div className="absolute flex flex-col  items-center w-4/12 h-full   justify-center bg-gray-200  md:w-4/12 lg:w-4/12">
+                    <p className="text-lg font-serif md:text-2xl lg:text-3xl font-bold text-slate-900">CONSULTORIA</p>
+                    <div className="w-11/12  h-1/4 z-20  relative mx-auto flex justify-center items-center md:h-2/4 ">
                         <Image
 
                             className="object-contain "
@@ -61,12 +62,17 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
                     </div>
                 </div>
 
-                <div className="relative  flex w-8/12 bg-blue-400 p-2 justify-end items-end ml-auto h-full z-10  md:w-8/12">
+                <div className="relative  flex w-8/12 justify-end items-end ml-auto h-full z-10  md:w-8/12">
 
 
 
                     <div className="w-full  h-full rounded-full relative ">
                         <Image className="object-cover lg:object-cover " priority fill quality={100} alt="Header" src={treinoHeader} />
+                    </div>
+
+
+                    <div className="w-3/12 hidden bg-gray-200 lg:block  h-full  relative ">
+                        <Image className="hidden lg:block object-contain " priority fill quality={100} alt="Header" src={halter} />
                     </div>
 
 
@@ -84,23 +90,23 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
                     <div className="absolute   top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
                         <div className=" relative w-10/12 gap-4 z-20  flex justify-end items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row md:w-8/12 md:gap-6 lg:w-10/12 lg:gap-8 ">
                             <a href="#planos" className="transition-all duration-500">
-                                <button className="text-white">Planos</button>
+                                <button className="text-black">Planos</button>
                             </a>
                             <a href="#sobre" className="transition-all duration-500">
-                                <button className="text-white">Sobre</button>
+                                <button className="text-black">Sobre</button>
                             </a>
                             <a href="#depoimentos" className="transition-all duration-500">
-                                <button className="text-white">Depoimentos</button>
+                                <button className="text-black">Depoimentos</button>
                             </a>
                             <a href="#contatos" className="transition-all duration-500">
-                                <button className="text-white">Contatos</button>
+                                <button className="text-black">Contatos</button>
                             </a>
 
 
 
                         </div>
 
-                        <div className="relative flex z-20 w-2/12  text-white justify-end items-centermax-w-7xl">
+                        <div className="relative flex z-20 w-2/12  text-black justify-end items-centermax-w-7xl">
                             {hasUser ?
                                 <div className="flex justify-center items-center gap-4 md:gap-6 lg:gap-8">
                                     <Link className="flex justify-center items-center" href={"/dashboard"}>

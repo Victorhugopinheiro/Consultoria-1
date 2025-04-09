@@ -4,7 +4,7 @@ import gym from "../../../../public/transferir.jpg"
 import alimento from "../../../../public/dieta.jpeg"
 import useEmblaCarousel from "embla-carousel-react"
 import { Flex, Text } from "@chakra-ui/react";
-import pera1 from "../../../../public/testeFrutas/pera03.webp"
+import pera1 from "../../../../public/testeFrutas/peraReal-removebg-preview.png"
 import banana1 from "../../../../public/testeFrutas/bananareal01.png"
 
 
@@ -21,16 +21,16 @@ export function About() {
 
                 <div className="relative">
 
-                    <div id="sobre" className="w-5/12 flex justify-start -top-56 items-start  absolute  h-svh right-0">
-                        <div data-aos="fade-down" data-aos-delay="1000" className="flex  relative w-full h-56 justify-start items-start  lg:h-72">
+                    <div id="sobre" className="w-5/12 flex justify-start -top-56 right-10 items-start  absolute  h-svh ">
+                        <div data-aos="fade-down" data-aos-delay="1000" className="flex  relative w-full h-64 justify-start items-start  lg:h-72">
                             <Image className="object-contain  opacity-100" fill src={banana1} alt="Frutas background" />
                         </div>
                     </div>
 
 
-                    <div className="flex mx-auto w-10/12 p-6 flex-col justify-center items-center  relative  mb-[340px] mt-80 rounded-md md:mt-96 lg:flex-row lg:mt-76">
+                    <div className="flex mx-auto w-9/12 lg:w-10/12 p-6 flex-col justify-center items-center  relative  mb-[340px] mt-80 rounded-md md:mt-96 lg:flex-row lg:mt-76">
                         <div className="w-full z-50 -bottom-96 flex justify-end  items-end py-28 my-10  absolute h-svh md:hidden">
-                            <div className="flex relative w-full h-56 justify-end">
+                            <div data-aos="fade-up" data-aos-delay="1000" className="flex relative w-full h-56 justify-end">
                                 <Image className="object-contain border-none opacity-100" fill src={pera1} alt="Frutas background" />
                             </div>
                         </div>

@@ -29,7 +29,7 @@ export function AboutProduto() {
 
     return (
 
-        <div className="bg-white my-16 h-full relative w-full flex flex-col md:flex-row transition-all duration-300  justify-start">
+        <div className="bg-white my-16 rounded-md h-full relative w-full flex flex-col md:flex-row transition-all duration-300  justify-start">
 
 
 
@@ -83,7 +83,7 @@ export function AboutProduto() {
                     "hidden transition-all md:flex w-3/12 h-full md:transition-all duration-300 pt-1 pr-2  flex-col items-center sticky top-0 gap-3 justify-between  rounded-md lg:h-[730px] " : "hidden transition-all"}`}>
 
 
-                <div className=" flex flex-col w-full  sticky gap-3 justify-between bg-white border border-black  text-black rounded-md p-3 h-full md:h-full lg:h-full">
+                <div className=" flex flex-col w-full  sticky gap-3 justify-between bg-white border border-gray-400  text-black rounded-md p-3 h-full md:h-full lg:h-full">
                     <div className="w-full">
                         <div className="flex justify-center">
                             <span className="text-gray-800 mb-3 text-center">Referencia no mercado</span>
@@ -115,7 +115,7 @@ export function AboutProduto() {
 
 
                         <div className="mt-2 flex justify-center w-full ">
-                            <p className="text-black">Consultoria preparada</p>
+                            <p className="text-gray-700 font-bold">Consultoria preparada</p>
                         </div>
 
                     </div>

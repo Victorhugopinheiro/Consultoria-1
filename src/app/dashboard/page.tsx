@@ -31,9 +31,9 @@ export default async function Dashboard() {
             <HeaderSmall meHeader={response.data.userDetail}/>
             <Container>
                 <div className="flex w-full h-full  justify-center  lg:h-full">
-                    <div className=" w-full grid grid-cols-1 gap-6 md   md:grid-cols-2">
+                    <div className=" w-full grid grid-cols-1 gap-6 md   md:grid-cols-1">
                         <FormDashboard me={response.data.userDetail} />
-                        <Plano me={response.data.userDetail} />
+                     
                     </div>
                 </div>
                 

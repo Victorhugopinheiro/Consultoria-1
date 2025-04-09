@@ -39,19 +39,7 @@ export function Plano({ me }: { me: Me }) {
                         <p className="border-t-2 border-b-2 mb-6 py-2 w-10/12  border-black"><strong>Porque escolher a nossa consultoria? </strong>Somos profissionais preparados para mudar a sua auto estima e sua saúde, estamos no mercado a +10 anos</p>
                     </div>
 
-                    {me.subscriptions
-                        ?
-                        <>
-                            <button type="submit" className="h-12 w-10/12 text-white font-bold mb-2 py-3 px-4 decoration-none bg-green-500 rounded-md hover:scale-105 duration-300 ">Você Já é um assinante</button>
-                            <ButtonChange />
-                        </>
-
-                        :
-                        <>
-                            <button type="submit" className="h-12 w-10/12 font-bold mb-2 py-3 px-4 decoration-none bg-black text-white rounded-md  
-                        hover:scale-105 duration-300">Você ainda não tem um plano</button>
-
-                        </>}
+                   
 
                 </div>
 

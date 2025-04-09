@@ -66,7 +66,7 @@ export function SideScroll() {
                                    
 
                                     <div className="flex flex-1 h-full  ">
-                                        <Image className="object-cover" priority quality={100} src={item.foto} alt="Imagem Ilustrativa" />
+                                        <Image className="object-cover rounded-[6px_0px_0px_6px]" priority quality={100} src={item.foto} alt="Imagem Ilustrativa" />
                                     </div>
 
                                 </section>

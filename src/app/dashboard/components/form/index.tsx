@@ -2,9 +2,12 @@
 
 import { Container } from "@/app/_components/container";
 import { ButtonChange } from "../buttonChange";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../../../../../public/color@4x.png"
 import Image from "next/image";
+import { api } from "@/services/apiClient";
+import { toast } from "sonner";
+import { AuthContext } from "@/context/user/AuthContext";
 
 
 interface Me {
@@ -19,37 +22,75 @@ interface Me {
 export function FormDashboard({ me }: { me: Me }) {
 
 
-    const [email, setEmail] = useState("")
-    const [telefone, setTelefone] = useState("")
-    const [endereco, setEndereco] = useState("")
+    const { logoutUser } = useContext(AuthContext)
+
+
+    const [email, setEmail] = useState(me.email ? me.email : "")
+    const [telefone, setTelefone] = useState(me.telefone ? me.telefone : "")
+    const [endereco, setEndereco] = useState(me.endereço ? me.endereço : "")
+
+
+
+
+    async function changeInfoUser() {
+        if (email === "" || telefone === "") {
+            console.log("Preencha os dados")
+            toast.warning("Preencha todos o campos")
+            return
+        }
+
+        if (email === email || telefone === telefone) {
+            toast.warning("Nenhum dado alterado")
+            return
+        }
+
+        try {
+            const response = await api.put("/users", {
+                email,
+                telefone,
+                endereco
+            })
+            toast.success("Informações alteradas")
+        } catch (err) {
+            console.log(err)
+        }
+
+
+    }
+
+
+
+
+
+
 
 
     return (
 
 
         <div className="flex w-full  justify-center items-center h-full">
-            <section className="w-10/12  h-full mt-28 md:w-full">
+            <section className="w-10/12 flex justify-center  h-full mt-28 md:w-full">
 
-                <div className="bg-white rounded-md  py-10 flex flex-col items-center md:h-[590px]">
+                <div className="bg-white rounded-md w-10/12  py-10 flex flex-col items-center md:h-[590px]">
 
-                    <h2 className="text-black text-xl p-3 font-bold md:2xl: lg:text-3xl">Detalhes</h2>
+                    <h2 className="text-black font-serif text-xl p-3 font-bold md:2xl: lg:text-3xl">Detalhes</h2>
 
-                    <input placeholder={"Ex: Email@gmail.com"} value={me.email} onChange={(e) => setEmail(e.target.value)} className="bg-slate-200 border border-black h-12 w-10/12 mb-2 py-1 px-2 decoration-none  rounded-md   ">
+                    <input placeholder={"Ex: Email@gmail.com"} value={email} onChange={(e) => setEmail(e.target.value)} className="bg-slate-200 border border-black h-12 w-6/12 mb-2 py-1 px-2 decoration-none  rounded-md   ">
                     </input>
 
-                    <input placeholder={"Ex: 11 934517489"} value={me.telefone} onChange={(e) => setTelefone(e.target.value)} className="bg-slate-200 h-12 w-10/12 border border-black mb-2 py-1 px-2 decoration-none bg-s late-700 rounded-md   ">
+                    <input placeholder={"Ex: 11 934517489"} value={telefone} onChange={(e) => setTelefone(e.target.value)} className="bg-slate-200 h-12 w-6/12 border border-black mb-2 py-1 px-2 decoration-none bg-s late-700 rounded-md   ">
                     </input>
 
-                    <input placeholder={"ex: Rua das Bandeiras, 215"} value={me.endereço ? me.endereço : ""} onChange={(e) => setEndereco(e.target.value)} className="bg-slate-200 border border-black h-12 w-10/12 mb-2 py-1 px-2 decoration-none bg-s late-700 rounded-md   ">
+                    <input placeholder={"ex: Rua das Bandeiras, 215"} value={endereco} onChange={(e) => setEndereco(e.target.value)} className="bg-slate-200 border border-black h-12 w-6/12 mb-2 py-1 px-2 decoration-none bg-s late-700 rounded-md   ">
                     </input>
 
 
 
 
-                    <button type="submit" className="h-12 w-10/12 font-bold mb-2 py-1 px-2 decoration-none bg-black text-white rounded-md 
+                    <button onClick={changeInfoUser} type="submit" className="h-12 w-6/12 font-bold mb-2 py-1 px-2 decoration-none bg-black text-white rounded-md 
                     hover:scale-105 duration-300">Alterar Informações</button>
 
-                    <button type="submit" className="h-12 w-10/12 font-bold mb-2 py-1 px-2 decoration-none text-white bg-red-600 border border-black rounded-md 
+                    <button onClick={logoutUser} type="submit" className="h-12 w-6/12 font-bold mb-2 py-1 px-2 decoration-none text-white bg-red-600 border border-black rounded-md 
                      hover:scale-105 duration-300">Sair</button>
 
                     <div className=" w-full flex px-10 justify-end items-end">
