@@ -48,7 +48,9 @@ export function FormComponent() {
             const apiClient = setupAPIClient()
 
 
-            const response = await apiClient.post("/subscribe")
+            const response = await apiClient.post("/subscribe",{
+                plano:select
+            })
 
 
             const { sessionId } = response.data

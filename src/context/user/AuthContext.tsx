@@ -155,13 +155,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
         password,
         telefone
       })
-    } catch (err) {
+      window.location.href = "/login"
+    }catch (err) {
       console.log(err)
+      toast.warning("Email ou Senha incorretas ")
       return
     }
-    window.location.href = "/login"
-
-
   }
 
   async function logoutUser() {

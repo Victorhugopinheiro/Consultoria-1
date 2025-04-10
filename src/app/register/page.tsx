@@ -8,6 +8,10 @@ import { cookies } from "next/headers";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "@/context/user/AuthContext";
 
+import validator from 'validator';
+import isEmail from 'validator/lib/isEmail';
+import { toast } from "sonner";
+
 
 
 
@@ -23,6 +27,19 @@ export default function Login() {
 
 
     async function handleLogin() {
+
+        const validatorEmail = validator.isEmail(email)
+
+        if (validatorEmail === false) {
+            toast.warning("Email ou Senha incorretas")
+            return
+        }
+
+        const validatorTelefone = validator.isMobilePhone(telefone)
+
+        if (validatorTelefone === false) {
+            toast.warning("Número de telefone inválido")
+        }
         try {
             await signUp({
                 email,
@@ -30,7 +47,7 @@ export default function Login() {
                 name,
                 telefone
             })
-        }catch(err){
+        } catch (err) {
             console.log(err)
             return
         }

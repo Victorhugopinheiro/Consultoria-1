@@ -7,7 +7,7 @@ import { api } from "@/services/apiClient";
 import { cookies } from "next/headers";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "@/context/user/AuthContext";
-import Router from 'next/router'
+
 import { redirect } from "next/navigation"
 import { toast } from "sonner";
 

@@ -22,9 +22,9 @@ export function Footer() {
                         <div className=" flex flex-col items-center justify-center gap-2  ">
                             <h3 className="text-2xl font-bold">Consutoria Seya</h3>
 
-                            <p>Extraindo seu potencial máximo.</p>
+                            <p>Extraindo seu máximo potencial.</p>
 
-                            <a href={`https://wa.me/11983168952?text=Olá vim pelo site e gostaria de mais informações`} className="bg-green-500 px-3 py-1 rounded-md text-white ">Contato via WhatsApp</a>
+                            <a href={`https://wa.me/11983168952?text=Olá vim pelo site e gostaria de mais informações`} className="bg-green-500 px-3 py-1 rounded-md text-white hover:scale-105 duration-300 ">Contato via WhatsApp</a>
                         </div>
 
 

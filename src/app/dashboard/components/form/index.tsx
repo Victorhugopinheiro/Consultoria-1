@@ -39,8 +39,9 @@ export function FormDashboard({ me }: { me: Me }) {
             return
         }
 
-        if (email === email || telefone === telefone) {
+        if (email === me.email && telefone === me.telefone) {
             toast.warning("Nenhum dado alterado")
+            console.log(email, telefone)
             return
         }
 
@@ -71,26 +72,26 @@ export function FormDashboard({ me }: { me: Me }) {
         <div className="flex w-full  justify-center items-center h-full">
             <section className="w-10/12 flex justify-center  h-full mt-28 md:w-full">
 
-                <div className="bg-white rounded-md w-10/12  py-10 flex flex-col items-center md:h-[590px]">
+                <div className="bg-white rounded-md w-10/12 px-2  py-10 flex flex-col items-center md:h-[590px]">
 
                     <h2 className="text-black font-serif text-xl p-3 font-bold md:2xl: lg:text-3xl">Detalhes</h2>
 
-                    <input placeholder={"Ex: Email@gmail.com"} value={email} onChange={(e) => setEmail(e.target.value)} className="bg-slate-200 border border-black h-12 w-6/12 mb-2 py-1 px-2 decoration-none  rounded-md   ">
+                    <input placeholder={"Ex: Email@gmail.com"} value={email} onChange={(e) => setEmail(e.target.value)} className="bg-slate-200 border border-black h-12 w-full mb-2 py-1 px-2 decoration-none  rounded-md md:w-6/12   ">
                     </input>
 
-                    <input placeholder={"Ex: 11 934517489"} value={telefone} onChange={(e) => setTelefone(e.target.value)} className="bg-slate-200 h-12 w-6/12 border border-black mb-2 py-1 px-2 decoration-none bg-s late-700 rounded-md   ">
+                    <input placeholder={"Ex: 11 934517489"} value={telefone} onChange={(e) => setTelefone(e.target.value)} className="bg-slate-200 border border-black h-12 w-full mb-2 py-1 px-2 decoration-none  rounded-md md:w-6/12   ">
                     </input>
 
-                    <input placeholder={"ex: Rua das Bandeiras, 215"} value={endereco} onChange={(e) => setEndereco(e.target.value)} className="bg-slate-200 border border-black h-12 w-6/12 mb-2 py-1 px-2 decoration-none bg-s late-700 rounded-md   ">
+                    <input placeholder={"ex: Rua das Bandeiras, 215"} value={endereco} onChange={(e) => setEndereco(e.target.value)} className="bg-slate-200 border border-black h-12 w-full mb-2 py-1 px-2 decoration-none  rounded-md md:w-6/12  ">
                     </input>
 
 
 
 
-                    <button onClick={changeInfoUser} type="submit" className="h-12 w-6/12 font-bold mb-2 py-1 px-2 decoration-none bg-black text-white rounded-md 
+                    <button onClick={changeInfoUser} type="submit" className="h-12 w-full font-bold mb-2 py-1 px-2 decoration-none bg-black text-white rounded-md md:w-6/12
                     hover:scale-105 duration-300">Alterar Informações</button>
 
-                    <button onClick={logoutUser} type="submit" className="h-12 w-6/12 font-bold mb-2 py-1 px-2 decoration-none text-white bg-red-600 border border-black rounded-md 
+                    <button onClick={logoutUser} type="submit" className="h-12 w-full font-bold mb-2 py-1 px-2 decoration-none text-white bg-red-600 border border-black rounded-md md:w-6/12
                      hover:scale-105 duration-300">Sair</button>
 
                     <div className=" w-full flex px-10 justify-end items-end">

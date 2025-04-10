@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "@/app/_components/container";
-import treinoHeader from "../../../../../../public/treinoHeader.jpg"
+import treinoHeader from "../../../../../../public/prof-2.jpg"
 import { LogIn, LogOut, User2 } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { api } from "@/services/apiClient";
@@ -47,9 +47,9 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
 
 
-                <div className="absolute flex flex-col  items-center w-4/12 h-full   justify-center bg-gray-200  md:w-4/12 lg:w-4/12">
-                    <p className="text-lg font-serif md:text-2xl lg:text-3xl font-bold text-slate-900">CONSULTORIA</p>
-                    <div className="w-11/12  h-1/4 z-20  relative mx-auto flex justify-center items-center md:h-2/4 ">
+                <div className="absolute flex flex-col  items-center w-4/12 h-full   justify-center bg-gray-100  md:w-4/12 lg:w-4/12">
+                    <p className="text-lg font-serif md:text-2xl  font-bold text-slate-900">CONSULTORIA</p>
+                    <div className="w-5/12  h-1/4 z-20  relative mx-auto flex justify-center items-center md:h-2/4 ">
                         <Image
 
                             className="object-contain "
@@ -71,9 +71,7 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
                     </div>
 
 
-                    <div className="w-3/12 hidden bg-gray-200 lg:block  h-full  relative ">
-                        <Image className="hidden lg:block object-contain " priority fill quality={100} alt="Header" src={halter} />
-                    </div>
+                  
 
 
 
@@ -110,12 +108,12 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
                             {hasUser ?
                                 <div className="flex justify-center items-center gap-4 md:gap-6 lg:gap-8">
                                     <Link className="flex justify-center items-center" href={"/dashboard"}>
-                                        <button><User2 className="size-5 md:size-6" /></button>
+                                        <button className="text-black bg-white rounded-full p-1"><User2 className="size-5 md:size-6" /></button>
                                     </Link>
 
 
 
-                                    <button onClick={LogoutUser}><LogOut className="size-5 md:size-6" /></button>
+                                    <button className="text-black bg-white rounded-full p-1" onClick={LogoutUser}><LogOut className="size-5 md:size-6" /></button>
 
                                 </div>
                                 :
