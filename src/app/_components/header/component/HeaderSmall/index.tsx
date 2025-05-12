@@ -32,8 +32,8 @@ export function HeaderSmall({ meHeader }: { meHeader: Me }) {
 
     return (
         <div className="w-full bg-white h-full mb-10 shadow-lg shadow-gray-500">
-            <div className="w-full h-full flex justify-between p-1">
-                <div className="flex flex-col  p-1 gap-2 h-full justify-center items-center">
+            <div className="w-full h-full gap-8 flex  justify-between p-1 lg:gap-0">
+                <div className="flex flex-col   md:px-16   gap-2 h-full justify-center items-center">
                     <Link className="flex justify-center items-center flex-col gap-2" href={"/"}>
                         <p className="text-black text-xl font-bold md:text-2xl">Consultoria</p>
                         <div className="relative w-24 h-full   flex flex-col justify-center items-center md:w-36 ">
@@ -41,7 +41,7 @@ export function HeaderSmall({ meHeader }: { meHeader: Me }) {
                         </div>
                     </Link>
                 </div>
-                <div className="w-full h-full flex pl-4 text-white  md:w-7/12">
+                <div className="w-full h-full  pl-4 flex items-center text-white md:w-7/12">
                     <div className="flex w-full  justify-center gap-3  items-center md:gap-5 md:justify-start lg:gap-8">
                         <div className="w-10/12 flex justify-center gap-4 md:gap-6 md:justify-start lg:gap-8">
                             {hasUser ? <>

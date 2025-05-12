@@ -1,7 +1,7 @@
 
 import Image from "next/image"
-import { Facebook, Instagram } from "lucide-react"
-import { BsWhatsapp } from "react-icons/bs"
+
+import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs"
 
 
 
@@ -42,8 +42,8 @@ export function Footer() {
                             <h3 className="text-2xl font-bold">Redes sociais</h3>
 
                             <div className="flex gap-3 mt-2">
-                                <a href=""><Facebook size={18} /></a>
-                                <a href="https://www.instagram.com/vibeesportenutricao/"><Instagram size={18} /></a>
+                                <a href=""><BsFacebook size={18} /></a>
+                                <a href="https://www.instagram.com/vibeesportenutricao/"><BsInstagram size={18} /></a>
                                 <a href="`https://wa.me/11983168952?text=Olá vim pelo site e gostaria de mais informações`"><BsWhatsapp size={18} /></a>
                             </div>
 

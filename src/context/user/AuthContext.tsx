@@ -67,11 +67,12 @@ export function signOut() {
   console.log("ERORR LOGOUT");
   try {
     destroyCookie(null, '@consultoria', { path: '/' })
+    window.location.href = "/login"
   } catch (err) {
     console.log("Error ao sair")
     return
   }
-  window.location.href = "/login"
+  
 }
 
 export function AuthProvider({ children }: AuthProviderProps) {

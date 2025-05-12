@@ -75,7 +75,6 @@ export function MyConsultoria() {
 
 
 
-
     return (
 
         <>
@@ -85,18 +84,18 @@ export function MyConsultoria() {
                 <div className="">
                     <div className="bg-white rounded-md border-b p-2 border-gray-300 mx-auto  w-full h-full flex flex-col md:flex-row ">
 
-                        <div className=" w-full flex justify-center h-full md:h-[450px] md:w-9/12 lg:h-full lg:w-9/12  rounded-[10px_0px_0px_10px]">
+                        <div className=" w-full  flex justify-center h-full md:h-[450px] md:w-9/12 lg:h-full lg:w-9/12  rounded-md:[10px_0px_0px_10px]">
                             <SideScroll />
 
                             {controlModal && !height && <ModalDevolucao />}
                         </div>
 
                         <div className={
-                            `${height ? "hidden" : "flex w-full flex-col items-center sticky top-0 gap-3 justify-between  rounded-[0px_10px_10px_0px] md:w-3/12  bg-white"}`}>
+                            `${height ? "flex md:hidden" : "flex w-full flex-col items-center sticky top-0 gap-3 justify-between  rounded-[0px_10px_10px_0px] md:w-3/12  bg-white"}`}>
 
 
                             <div className="
-                             flex flex-col w-full border border-gray-400 sticky gap-3 justify-between rounded-[0px_10px_10px_0px] bg-white text-black   p-3 h-full md:h-full lg:h-full">
+                             flex flex-col w-full border border-gray-400 sticky gap-3 rounded-[0px_0px_10px_10px] justify-between md:rounded-[0px_10px_10px_0px] bg-white text-black   p-1 h-full md:h-full lg:h-full lg:p-3">
                                 <div className="w-full">
                                     <div className="flex justify-center">
                                         <span className="text-gray-800 mb-3 text-center">Referencia no mercado</span>
@@ -118,7 +117,7 @@ export function MyConsultoria() {
                                         </div>
 
 
-                                        <div className="mt-6  w-3/5 md:w-4/5 flex flex-col p-1  rounded-md">
+                                        <div className="mt-6  w-3/5 md:w-full flex flex-col p-1  rounded-md lg:w-4/5">
                                             <FormComponent />
                                         </div>
                                     </div>
@@ -133,10 +132,12 @@ export function MyConsultoria() {
 
                                 </div>
 
-                                <div className="flex justify-between gap-8 text-sm md:justify-normal  md:gap-2 lg:text-base lg:justify-between">
+                                <div className="flex justify-between gap-8 text-sm   md:gap-2 lg:text-base ">
                                     <span className="flex items-center">Segurança <Check color="green" size={16} /></span>
                                     <button onClick={openModal} className="font-bold">Devolução </button>
                                 </div>
+
+
 
                             </div>
 
@@ -154,7 +155,7 @@ export function MyConsultoria() {
 
             </Container>
 
-           
+
 
         </>
 

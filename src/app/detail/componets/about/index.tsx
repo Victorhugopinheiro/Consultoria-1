@@ -43,7 +43,7 @@ export function AboutProduto() {
 
                 {controlModal && height && <ModalDevolucao />}
 
-                
+
 
 
                 <div className="relative w-full h-full pt-10  flex flex-col justify-center items-center ">
@@ -83,7 +83,7 @@ export function AboutProduto() {
                     "hidden transition-all md:flex w-3/12 h-full md:transition-all duration-300 pt-1 pr-2  flex-col items-center sticky top-0 gap-3 justify-between  rounded-md lg:h-[730px] " : "hidden transition-all"}`}>
 
 
-                <div className=" flex flex-col w-full  sticky gap-3 justify-between bg-white border border-gray-400  text-black rounded-md p-3 h-full md:h-full lg:h-full">
+                <div className=" flex flex-col w-full  sticky gap-3 justify-between bg-white border border-gray-400  text-black rounded-md p-1 h-full md:h-full lg:h-full lg:p-3">
                     <div className="w-full">
                         <div className="flex justify-center">
                             <span className="text-gray-800 mb-3 text-center">Referencia no mercado</span>
@@ -105,7 +105,7 @@ export function AboutProduto() {
                             </div>
 
 
-                            <div className="mt-6 w-full  flex flex-col p-3 bg-white rounded-md">
+                            <div className="mt-6  w-3/5 md:w-full flex flex-col p-1  rounded-md lg:w-4/5">
                                 <FormComponent />
                             </div>
                         </div>
@@ -114,13 +114,13 @@ export function AboutProduto() {
 
 
 
-                        <div className="mt-2 flex justify-center w-full ">
-                            <p className="text-gray-700 font-bold">Consultoria preparada</p>
+                        <div className="mt-2 flex  justify-center w-full ">
+                            <p className="text-center">Consultoria preparada</p>
                         </div>
 
                     </div>
 
-                    <div className="flex justify-between gap-8 text-sm md:justify-normal  md:gap-2 lg:text-base lg:justify-between">
+                    <div className="flex justify-between gap-8 mt-14  text-sm md:justify-between  md:gap-2 lg:text-base lg:justify-between">
                         <span className="flex items-center">Segurança <Check color="green" size={16} /></span>
                         <button onClick={openModal} className="font-bold">Devolução </button>
                     </div>

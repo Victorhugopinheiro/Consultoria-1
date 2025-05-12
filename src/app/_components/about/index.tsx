@@ -21,8 +21,8 @@ export function About() {
 
                 <div className="relative">
 
-                    <div id="sobre" className="w-5/12 flex justify-start -top-56 right-10 items-start  absolute  h-svh ">
-                        <div data-aos="fade-down" data-aos-delay="1000" className="flex  relative w-full h-64 justify-start items-start  lg:h-72">
+                    <div id="sobre" className="w-5/12 flex justify-start -top-52 right-10 items-start  absolute  h-svh ">
+                        <div data-aos="flip-left" data-aos-delay="1500" className="flex  relative w-full h-64 justify-start items-start  lg:h-72">
                             <Image className="object-contain  opacity-100" fill src={banana1} alt="Frutas background" />
                         </div>
                     </div>
@@ -36,11 +36,11 @@ export function About() {
                         </div>
 
 
-                        
 
 
-                        <div data-aos="fade-up" data-aos-delay="500" className="flex z-10 lg:flex-[0_0_calc(100%/2)] text-white  rounded-md lg:-translate-y-28 lg:text-black lg:translate-x-28 ">
-                            <article className="max-w-xl flex justify-center items-center p-6 opacity-100  flex-col">
+
+                        <div data-aos="fade-up-right" data-aos-delay="500" className="flex z-10 lg:flex-[0_0_calc(100%/2)]  text-white  rounded-md  lg:text-black  ">
+                            <article  className="max-w-xl z-20 flex justify-center items-center p-6 opacity-100  flex-col">
                                 <h1 className="text-2xl text-center font-bold z-10  mb-2">Quem somos?</h1>
 
                                 <p className="  max-w-96 lg:max-w-xl leading-7 text-lg z-10">Na consutoria Seya acreditamos que a saúde e o bem-estar são a base de uma vida plena e feliz. Nossa missão é transformar seus objetivos em resultados concretos, oferecendo um serviço personalizado de treino e nutrição.
@@ -52,9 +52,11 @@ export function About() {
 
                             </article>
 
-                            <div className="absolute inset-0 opacity-70 rounded-md bg-slate-900 lg:bg-slate-100 ">
+                          
+                                <div className="absolute   inset-0  rounded-md bg-slate-900 lg:bg-slate-100 lg:opacity-70 ">
 
-                            </div>
+                                </div>
+                            
                         </div>
 
 
@@ -62,7 +64,7 @@ export function About() {
 
 
 
-                            <div data-aos="fade-up" className="relative flex justify-center  items-center w-full h-full lg:h-[400px] ">
+                            <div data-aos="fade-up-right" data-aos-delay="1000" className="relative flex justify-center  items-center w-full h-full lg:h-[400px] ">
                                 <Image className="object-cover rounded-md" fill quality={100} priority src={alimento} alt="Foto de um alimento" />
 
                                 <div className="absolute inset-0 opacity-20 rounded-md bg-slate-900 ">

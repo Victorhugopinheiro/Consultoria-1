@@ -47,9 +47,9 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
 
 
-                <div className="absolute flex flex-col  items-center w-4/12 h-full   justify-center bg-gray-100  md:w-4/12 lg:w-4/12">
-                    <p className="text-lg font-serif md:text-2xl  font-bold text-slate-900">CONSULTORIA</p>
-                    <div className="w-5/12  h-1/4 z-20  relative mx-auto flex justify-center items-center md:h-2/4 ">
+                <div className="absolute flex flex-col p-2  items-center w-4/12 h-full   justify-center bg-gray-100  md:w-4/12 lg:w-4/12">
+                    <p className="text-lg font-serif md:text-xl lg:text-2xl  font-bold text-slate-900">CONSULTORIA</p>
+                    <div className="w-full  h-1/4 z-20   relative mx-auto flex justify-center items-center md:h-2/4 ">
                         <Image
 
                             className="object-contain "
@@ -71,7 +71,7 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
                     </div>
 
 
-                  
+
 
 
 
@@ -85,8 +85,8 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
 
                 <Container>
-                    <div className="absolute   top-0 max-w-7xl p-1 flex justify-center items-center  w-full z-30 md:flex-row">
-                        <div className=" relative w-10/12 gap-4 z-20  flex justify-end items-start  px-2 mx-auto max-w-7xl font-bold text-white  md:flex-row md:w-8/12 md:gap-6 lg:w-10/12 lg:gap-8 ">
+                    <div className="absolute   top-0 max-w-7xl px-8 flex justify-center items-center  w-full z-30 md:flex-row lg:w-full">
+                        <div className=" relative   gap-4 z-20   flex  items-start  mx-auto max-w-7xl font-bold text-white  md:flex-row  md:gap-6  lg:gap-8 ">
                             <a href="#planos" className="transition-all duration-500">
                                 <button className="text-black">Planos</button>
                             </a>
@@ -104,7 +104,7 @@ export function MyHeader({ meHeader }: { meHeader: Me }) {
 
                         </div>
 
-                        <div className="relative flex z-20 w-2/12  text-black justify-end items-centermax-w-7xl">
+                        <div className="relative flex z-20   text-black  items-center max-w-7xl">
                             {hasUser ?
                                 <div className="flex justify-center items-center gap-4 md:gap-6 lg:gap-8">
                                     <Link className="flex justify-center items-center" href={"/dashboard"}>
